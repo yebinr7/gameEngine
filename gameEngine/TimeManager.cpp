@@ -37,8 +37,23 @@ void TimeManager::Update()
 	*/
 
 	::QueryPerformanceCounter(reinterpret_cast<LARGE_INTEGER*>(&currentCount));
+	//====================================================================================================
 
-	_deltaTime = (currentCount - _prevCount) / _frequency;
+	_deltaTime = (currentCount - _prevCount) / static_cast<float>(_frequency); //그냥 비례식 이용한거임; 
+	//델타t초 : 1초 = 1프레임당틱 : 1초당 틱 
+	_prevCount = currentCount;//업데이트 해주기 
+
+	_frameCount++;//프레임당개수 
+	_frameTime += _deltaTime; //프레임당걸린시간 누적
+
+	if (_frameTime >= 1.f)//1초가 증가됐을때
+	{
+		_fps = static_cast<uint32>(_frameCount / _frameTime); //프레임개수/누적프레임시간 
+		_frameTime = 0.f; //다시밀기
+		_frameCount = 0; //다시밀기 
+	}
+	//====================================================================================================
+
 	/*
 	QueryPerformanceCounter 함수를 다시 호출하여 현재의 시간 카운트를 얻습니다.
 	그런 다음 초기 시간 카운트와의 차이를 계산하여 경과 시간을 계산하고, 이를 주파수로 나눠서 '초' 단위로 변환합니다.

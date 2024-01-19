@@ -34,14 +34,16 @@ public:
 	float GetDeltaTime() { return _deltaTime; }
 
 private:
-	uint64 _frequency = 0;//
-	uint64 _prevCount = 0;
-	float _deltaTime = 0.f;
+	uint64 _frequency = 0;//컴퓨터의 주파수 1초에 몇번 
+	uint64 _prevCount = 0;//이전 클럭개수
+	float _deltaTime = 0.f;//현재프레임시간-이전프레임시간 
 
 
 private:
 	uint32 _frameCount = 0;
 	float  _frameTime = 0.f;
 	uint32 _fps = 0;
+
+
 };
 

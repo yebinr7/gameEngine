@@ -58,6 +58,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     //HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_GAMEENGINE));
 
     MSG msg = {};
+    uint64 prevTick = 0;
 
     // 기본 메시지 루프입니다:
     //3)  메인 루프 
@@ -72,8 +73,17 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         {
             //게임 업데이트 매프레임마다 & 렌더까지 
             //====================================================================================================
-            game.Update();
-            game.Render();
+            //1초에 155번 불리게되면 155fps 
+
+            uint64 now = ::GetTickCount64(); 
+           // if (now - prevTick >= 10)  //프레임 제한!!! now틱- 0틱 >=10 
+            {
+                game.Update();
+                game.Render();
+
+                prevTick = now;//틱 갱신 
+            }
+           
             //====================================================================================================
 
         }

@@ -8,6 +8,7 @@ using namespace std;
 
 class Utils
 {
+public:
 	//정적으로 만들어서 데이터영역에 있는 매서드 ::->로 땡겨쓰는 용 
 	static void DrawTexts(HDC hdc, Pos pos, const wstring& str); 
 

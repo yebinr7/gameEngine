@@ -1,13 +1,13 @@
 #include "pch.h"
 #include "inputManager.h"
 
-void inputManager::Init(HWND hwnd)
+void InputManager::Init(HWND hwnd)
 {
 	_hwnd = hwnd;
 	_states.resize(KEY_TYPE_COUNT, KeyState::None);//255개 모두 None상태로 초기화 
 }
 
-void inputManager::Update()
+void InputManager::Update()
 {
 	BYTE asciiKeys[KEY_TYPE_COUNT] = {};//1바이트 256개의 배열 만들어주기 
 	if(::GetKeyboardState(asciiKeys) == false)//매 프레임마다 모든 키보드 상태 정보를 가져온다. 이게 더 빠름 
@@ -15,7 +15,7 @@ void inputManager::Update()
 	
 	//::GetKeyboardState로 배열 형태로 모든 상태 가져왔다면 
 	//그 배열의 모든 요소 돌면서 체크되어있는지 확인한다. 
-	for (uint32 key = 0; key < KEY_STATE_COUNT; key++)
+	for (uint32 key = 0; key < KEY_TYPE_COUNT; key++)
 	{//만약 'A' 키라면 
 		if (asciiKeys[key] & 0x80)//비트 플레그 체크 ::GetKeyboardState으로 현재 눌린상태라면 ! 
 		{

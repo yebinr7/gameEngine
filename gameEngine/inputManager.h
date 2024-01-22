@@ -15,6 +15,8 @@ enum class KeyType
 	S = 'S',
 	D = 'D',
 
+	SpaceBar = VK_SPACE,
+
 };
 
 enum class KeyState
@@ -36,9 +38,9 @@ enum
 	KEY_STATE_COUNT = static_cast<int32>(KeyState::End),
 };
 
-class inputManager
+class InputManager
 {
-	DECLARE_SINGLE(inputManager)
+	DECLARE_SINGLE(InputManager)
 
 public:
 	//윈도우창 정보 가져오기 

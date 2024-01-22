@@ -15,3 +15,9 @@ struct Pos
 	float y = 0;
 };
 
+struct State
+{
+	int32 hp = 0;
+	int32 maxHp = 0;
+	float speed = 0;
+};

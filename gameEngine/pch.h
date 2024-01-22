@@ -4,6 +4,7 @@
 #include "Enums.h"
 #include <Windows.h>
 #include <vector>
+#include "Utils.h"
 #include <list>
 #include <map>
 #include <unordered_map>	

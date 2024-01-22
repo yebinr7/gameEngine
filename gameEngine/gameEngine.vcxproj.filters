@@ -30,6 +30,9 @@
     <Filter Include="소스 파일\02. Scene\Game">
       <UniqueIdentifier>{194349e5-df9b-4240-8ccc-2412b3603a48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\03. Objects\Game">
+      <UniqueIdentifier>{98f1f906-eaac-433c-8ea0-496c52b2fc3b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gameEngine.h">
@@ -59,7 +62,7 @@
     <ClInclude Include="Game.h">
       <Filter>소스 파일\00. MainGame</Filter>
     </ClInclude>
-    <ClInclude Include="inputManager.h">
+    <ClInclude Include="InputManager.h">
       <Filter>소스 파일\01. Manager</Filter>
     </ClInclude>
     <ClInclude Include="TimeManager.h">
@@ -79,6 +82,21 @@
     </ClInclude>
     <ClInclude Include="GameScene.h">
       <Filter>소스 파일\02. Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Missile.h">
+      <Filter>소스 파일\03. Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>소스 파일\03. Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>소스 파일\03. Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>소스 파일\03. Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>소스 파일\01. Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -104,7 +122,7 @@
     <ClCompile Include="Game.cpp">
       <Filter>소스 파일\00. MainGame</Filter>
     </ClCompile>
-    <ClCompile Include="inputManager.cpp">
+    <ClCompile Include="InputManager.cpp">
       <Filter>소스 파일\01. Manager</Filter>
     </ClCompile>
     <ClCompile Include="TimeManager.cpp">
@@ -124,6 +142,21 @@
     </ClCompile>
     <ClCompile Include="GameScene.cpp">
       <Filter>소스 파일\02. Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\03. Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Missile.cpp">
+      <Filter>소스 파일\03. Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>소스 파일\03. Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>소스 파일\03. Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>소스 파일\01. Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,8 @@
 #include "InputManager.h"
 #include "Missile.h"
 #include "ObjectManager.h"
+#include "ResourceManager.h"
+#include "LineMesh.h"
 Player::Player()
 	:Object(ObjectType::Player)//오브젝트 생성자로 타입 초기화 
 {
@@ -70,5 +72,8 @@ void Player::Update()
 void Player::Render(HDC hdc)
 {
 	//플레이어 라고 생각 
-	Utils::DrawCircle(hdc, _pos, 50);
+	//Utils::DrawCircle(hdc, _pos, 50);
+	const LineMesh* mesh = GET_SINGLE(ResourceManager)->GetLineMesh(L"Player");
+	if (mesh)
+		mesh->Render(hdc, _pos);
 }

@@ -59,7 +59,6 @@ void Missile::Update()
 			GET_SINGLE(ObjectManager)->Remove(this);
 			return;//!삭제했으니 접근불가 메모리 이므로 return 
 		}
-	\
 	}
 
 }

@@ -3,6 +3,7 @@
 #include "TimeManager.h" 
 #include "inputManager.h"
 #include "SceneManager.h"
+#include "ResourceManager.h"
 Game::Game()
 {
 
@@ -12,6 +13,7 @@ Game::Game()
 Game::~Game()
 {
 	GET_SINGLE(SceneManager)->Clear();
+	GET_SINGLE(ResourceManager)->Clear();
 	//사실 마지막에 메모리체크
 	_CrtDumpMemoryLeaks();
 }
@@ -34,6 +36,7 @@ void Game::Init(HWND hwnd)
 	GET_SINGLE(TimeManager)->Init();//싱글톤객체로 Init 
 	GET_SINGLE(InputManager)->Init(hwnd);
 	GET_SINGLE(SceneManager)->Init();
+	GET_SINGLE(ResourceManager)->Init();
 
 	GET_SINGLE(SceneManager)->ChangeScene(SceneType::GameScene);//디폴트 씬 설정하기 
 }

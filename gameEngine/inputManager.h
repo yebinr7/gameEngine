@@ -2,7 +2,7 @@
 enum class KeyType
 {
 	//찾기 편하게 매핑해주기 
-	LeftMous = VK_LBUTTON,
+	LeftMouse = VK_LBUTTON,
 	RightMouse = VK_RBUTTON,
 
 	Up = VK_UP,

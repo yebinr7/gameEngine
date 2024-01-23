@@ -13,7 +13,7 @@ public:
 
 
 private:
-	vector<pair<POINT, POINT>> _lines;//두점을 가진 벡터 
+	vector<pair<POINT, POINT>> _lines;//두점을 가진 벡터
 
 	//맨처음으로 눌렀는지?
 	bool	_setOrigin		    = true;

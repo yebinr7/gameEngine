@@ -16,6 +16,7 @@ public:
 private:
 	//class Player* _player = nullptr; //클래스전방선언+포인터 <=한계가있다.
 	//여기서 이제 자료구조로 객체들 들고있는 것! 
-	vector<Player*> _playerVector;
+	//vector<Player*> _playerVector;
+	//Object매니저에서 <Object*> 벡터로 관리한다. 
 };
 

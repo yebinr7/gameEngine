@@ -25,9 +25,9 @@ void ResourceManager::Clear()
 
 const LineMesh* ResourceManager::GetLineMesh(wstring key)
 {
-	auto findIt = _lineMeshes.find(key);
+	auto findIt = _lineMeshes.find(key); //해쉬맵 저장소에  
 	if (findIt == _lineMeshes.end())
 		return nullptr;
 
-	return findIt->second;
+	return findIt->second; //키에 맞는 lineMesh* 주소값 
 }

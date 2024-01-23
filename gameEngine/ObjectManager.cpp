@@ -25,11 +25,13 @@ void ObjectManager::Remove(Object* object)
 
 	//지우고 싶은 오브젝트가 있다면...
 
+
 	//더럽게 만들어진...리무브 
 	_objects.erase(std::remove(_objects.begin(), _objects.end(), object), _objects.end());
 
 	//TODO object 지우는 거 괜찮은가?
-	delete object;
+	delete object;//### 먼저 포인터가 가르키는 객체 지우고 그 포인터를 _objects벡터에서 삭제하는건 안되나?
+	
 }
 
 void ObjectManager::Clear()

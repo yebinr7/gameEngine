@@ -73,7 +73,7 @@ void Player::Render(HDC hdc)
 {
 	//플레이어 라고 생각 
 	//Utils::DrawCircle(hdc, _pos, 50);
-	const LineMesh* mesh = GET_SINGLE(ResourceManager)->GetLineMesh(L"Player");
-	if (mesh)
-		mesh->Render(hdc, _pos);
+	const LineMesh* mesh = GET_SINGLE(ResourceManager)->GetLineMesh(L"Player");//리소스 매니저 객체안의 해쉬맵에 저장되어 있는 주소값 빼오기 
+	if (mesh)//저장되어 있는 LineMesh 객체의 주소가 존재한다면 
+		mesh->Render(hdc, _pos);//그릴 플레이어의 위치 
 }

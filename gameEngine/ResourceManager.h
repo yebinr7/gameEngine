@@ -15,6 +15,6 @@ public:
 	const LineMesh* GetLineMesh(wstring key);
 
 private:
-	unordered_map<wstring, LineMesh*> _lineMeshes;
+	unordered_map<wstring, LineMesh*> _lineMeshes;//ÇØ½¬¸Ê,Á¤·Äx 
 };
 

@@ -82,6 +82,8 @@ void EditScene::Update()
 		}
 		file.close();
 	}
+
+
 	//·Îµå 
 	if (GET_SINGLE(InputManager)->GetButtonDown(KeyType::D))
 	{

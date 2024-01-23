@@ -55,7 +55,7 @@ void LineMesh::Load(wstring path)
 	int32 count;
 	file >> count;
 
-	_lines.clear();
+	_lines.clear();//이전에 저장되어 있는 그림 삭제 
 
 	for (int32 i = 0; i < count; i++)
 	{
@@ -80,13 +80,13 @@ void LineMesh::Render(HDC hdc, Pos pos) const
 		POINT pt2 = line.second;
 
 		Pos pos1;
-		pos1.x = pos.x + (float)pt1.x; //기준점 + 실제 좌표 
+		pos1.x = pos.x + (float)pt1.x; //받아온 플레이어의 좌표 + 저장해둔 좌표 
 		pos1.y = pos.y + (float)pt1.y;
 
 		Pos pos2;
 		pos2.x = pos.x + (float)pt2.x;
 		pos2.y = pos.y + (float)pt2.y;
 
-		Utils::DrawLine(hdc, pos1, pos2);
+		Utils::DrawLine(hdc, pos1, pos2);//hdc는 백버퍼임 
 	}
 }

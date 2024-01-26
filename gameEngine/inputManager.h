@@ -14,7 +14,8 @@ enum class KeyType
 	A = 'A',
 	S = 'S',
 	D = 'D',
-
+	Q = 'Q',
+	E = 'E',
 	SpaceBar = VK_SPACE,
 
 };

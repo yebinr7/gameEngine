@@ -28,7 +28,7 @@ void GameScene::Init()
 	}
 //====================================================================================================
 	// 몬스터 만드는 코드 
-	for(int32 i =0 ; i<5; i++)
+	for(int32 i =0 ; i<1; i++)
 	{
 		Monster* monster = GET_SINGLE(ObjectManager)->CreateObject<Monster>();
 		monster->SetPos(Pos{static_cast<float>(i + 1) * 100, 100 });//컬리브레이스 축소변환 

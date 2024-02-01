@@ -32,10 +32,8 @@ struct Vector
 {
 	Vector() {};
 	Vector(float x, float y)
-		:x(x), y(y)
 	{
 
-	}
 
 	Vector operator+(const Vector& other)
 	{
